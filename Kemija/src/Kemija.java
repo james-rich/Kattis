@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Kemija {
@@ -7,12 +6,12 @@ public class Kemija {
         String string = in.nextLine();
 
         StringBuilder newString = new StringBuilder();
-        boolean wasVowel = false;
         for (int i = 0; i < string.length(); i++) {
-            if("a".equals(string.charAt(i)) || "e".equals(string.charAt(i)) || "i".equals(string.charAt(i)) || "o".equals(string.charAt(i)) || "u".equals(string.charAt(i))){
-                wasVowel = true;
+            if(Character.valueOf('a').equals(string.charAt(i)) ||Character.valueOf('e').equals(string.charAt(i)) || Character.valueOf('i').equals(string.charAt(i)) || Character.valueOf('o').equals(string.charAt(i)) || Character.valueOf('u').equals(string.charAt(i))){
                 newString.append(string.charAt(i));
                 i+=2;
+            }else{
+                newString.append(string.charAt(i));
             }
         }
         System.out.println(newString);
